@@ -1,5 +1,4 @@
 import { Footer, Body } from "./style/ui/homepage/homepage";
-
 export default function Page() {
   return (
     <div>

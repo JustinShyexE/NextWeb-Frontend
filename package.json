@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@next/font": "^14.2.15",
     "gsap": "^3.12.7",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-infinite-logo-slider": "^1.1.4",
+    "react-responsive": "^10.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
