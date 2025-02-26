@@ -1,6 +1,6 @@
 "use client";
 import "./style/ui/css/homepage.css";
-import { NavBar } from "./style/ui/homepage/homepage";
+import { NavBar } from "./style/components/NavBar";
 import TopBarSlider from "./style/components/TopBarSlider";
 
 export default function RootLayout({

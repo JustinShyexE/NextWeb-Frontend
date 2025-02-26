@@ -6,20 +6,6 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Link from "next/link";
 
-export function NavBar() {
-  return (
-    <div className="navbar">
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/homepage">This is the secondpage Homepage2...</Link>
-        </li>
-      </ul>
-    </div>
-  );
-}
 
 export function Footer() {
   return <div className="background">Footer hih</div>;
