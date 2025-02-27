@@ -3,11 +3,15 @@ import Link from "next/link";
 import { irinaSans } from "../ui/fonts";
 import { LilitaOne } from "../ui/fonts";
 import { useState } from "react";
+import { Button } from "../smallcomponents/button";
 
 export function NavBar() {
   // For Menu Bar 1
   const [isOpen, setOpen] = useState(false);
-  const [barMenu, setBarMenu] = useState(false)
+  const [barMenu, setBarMenu] = useState(false);
+  const [anim, setAnim] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
+
   let count: boolean = true;
   function openClose() {
     if (count) {
@@ -17,32 +21,59 @@ export function NavBar() {
     }
     if (!isOpen) setOpen(true);
     else setOpen(false);
-    console.log(isOpen);
-    if(barMenu)setBarMenu(false)
+    if (barMenu) setBarMenu(false);
+    if (anim) setAnim(false);
   }
-   
-    // For Menu Bar 2
-  let bol = true
- function barmenu(){
-  if(bol){
-    const el = document.querySelector(".bar-menu-off")
-    if(el) el.style.visibility = "visible";
-    bol = false
-  }
-   if(!barMenu) setBarMenu(true)
-    else  setBarMenu(false)
- }
 
+  // For Menu Bar 2
+  let bol: boolean = true;
+  function barmenu() {
+    if (bol) {
+      const el = document.querySelector(".bar-menu-off");
+      if (el) el.style.visibility = "visible";
+      bol = false;
+    }
+    handleAnimation();
+    if (!barMenu) {
+      setBarMenu(true);
+      setHasOpened(true);
+    } else setBarMenu(false);
+  }
+
+  function handleAnimation() {
+    if (!anim) setAnim(true);
+    else setAnim(false);
+  }
+  function changeState() {
+    if (window.innerWidth < 1200) {
+      setBarMenu(false);
+      setAnim(false);
+    }
+    setHasOpened(false);
+  }
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", changeState);
+    window.addEventListener("resize", changeState);
+  }
   return (
     <div className="navbar">
       <div id="bar" className={isOpen ? "bar-on" : "bar-off"}></div>
       <div className={barMenu ? "bar-menu-on" : "bar-menu-off "}></div>
-      <div className="navbar-start center">
-        <div className="navbar-hamburg center" >
+      <div
+        className={
+          anim
+            ? "navbar-start-open center"
+            : hasOpened
+            ? "navbar-start-close center"
+            : "navbar-start center"
+        }
+      >
+        <div className="navbar-hamburg center">
           <Hamburger size={20} toggled={isOpen} toggle={openClose} />
         </div>
         <div className="navbar-start-child center">
-          <span onClick={barmenu} className={`${irinaSans.className} navbar-button cursor`}>
+          <span onClick={barmenu} className={`${irinaSans.className} navbar-button bar2 cursor`}>
             Bar2 <div className="nav-underline"></div>
           </span>
           <Link className={`${irinaSans.className} navbar-button`} href="/">
@@ -56,11 +87,30 @@ export function NavBar() {
           </Link>
         </div>
       </div>
-      <div className="navbar-mid center">
+      <div
+        className={
+          anim
+            ? "navbar-mid navbar-mid-open center"
+            : hasOpened
+            ? "navbar-mid navbar-mid-close center"
+            : "navbar-mid center"
+        }
+      >
         <h2 className={`${LilitaOne.className} logo`}>NextWeb</h2>
         <div className="logo-bck"></div>
       </div>
-      <div className="navbar-end"></div>
+      <div
+        className={
+          barMenu
+            ? "navbar-end navbar-end-open center"
+            : hasOpened
+            ? "navbar-end navbar-end-close center"
+            : "navbar-end center"
+        }
+      >
+        <Button name="Contact us" animation="start" size={150} maxSize={170} />
+        <Button name="Later" animation="end" size={120} maxSize={140} id="btn-visibility" />
+      </div>
     </div>
   );
 }

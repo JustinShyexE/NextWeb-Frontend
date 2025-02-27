@@ -7,7 +7,6 @@ export const comicNeue = Comic_Neue({
     weight: ["400"]
 });
 
-
 export const  irinaSans = Inria_Sans({ 
     subsets: ['latin'],
     weight: ["700"]

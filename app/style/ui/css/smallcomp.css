@@ -1,0 +1,52 @@
+.btn-div{
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+}
+.btn-start{
+    display: flex;
+    justify-content: start;
+}
+.btn-end{
+    display: flex;
+    justify-content: end;
+   
+}
+#btn-visibility{
+    display: none;
+}
+.main-button {
+  height: 70px;
+  font-size: 14px;
+  border-radius: 40px;
+  transition: width 0.3s ease;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: 0px;
+  background-color: rgba(189, 202, 190, 1);
+}
+
+.arrow {
+  font-size: 25px;
+  margin-top: 2px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main-button:hover .arrow {
+  opacity: 1;
+}
+
+.btn-text{
+    position: relative;
+    left: 21px;
+    transition: left 1s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+    #btn-visibility{
+        display: contents;
+    }
+}
