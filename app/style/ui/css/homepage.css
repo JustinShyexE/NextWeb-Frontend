@@ -21,7 +21,6 @@ body {
 .logo-bck {
   width: 100px;
   height: 80px;
-  background-color: rgba(207, 34, 34, 1);
   position: absolute;
   z-index: 1;
   top: 10px;
@@ -71,12 +70,10 @@ body {
 .navbar-start-open {
   width: 75px;
   height: 100%;
-  background-color: brown;
 }
 .navbar-start-close {
   width: 75px;
   height: 100%;
-  background-color: brown;
 }
 .navbar-hamburg {
   z-index: 100;
@@ -95,7 +92,6 @@ body {
 .navbar-end {
   width: 100px;
   height: 100%;
-  background-color: yellow;
   z-index: 98;
   gap: 5px;
 }
@@ -146,7 +142,7 @@ body {
   visibility: visible;
   width: auto;
   height: 500px;
-  background-color: purple;
+  background-color: whitesmoke;
   border-radius: 30px;
   position: absolute;
   opacity: 1;
@@ -172,7 +168,7 @@ body {
 .bar-menu-off {
   width: auto;
   height: 700px;
-  background-color: purple;
+  background-color: whitesmoke;
   position: absolute;
   border-radius: 30px;
   top: -700px;
@@ -211,20 +207,17 @@ body {
   .navbar-start-open {
     width: 400px;
     height: 100%;
-    background-color: brown;
     justify-content: space-between;
   }
   .navbar-start-close {
     width: 400px;
     height: 100%;
-    background-color: brown;
     justify-content: space-between;
   }
   .navbar-start-child {
     width: 350px;
     height: 50px;
     display: inline-flex;
-    background-color: rgb(47, 194, 204);
     justify-content: start;
     gap: 30px;
     padding-left: 20px;
@@ -266,7 +259,6 @@ body {
   .navbar-start {
     width: 400px;
     height: 100%;
-    background-color: brown;
     justify-content: space-between;
   }
   .navbar-start-open {
@@ -380,7 +372,6 @@ body {
   .bar-menu-a {
     width: 400px;
     height: 350px;
-    background-color: aquamarine;
     padding-top: 150px;
     padding-left: 50px;
     border-radius: 30px;
@@ -389,7 +380,6 @@ body {
     width: 100%;
     height: 400px;
     padding-top: 100px;
-    background-color: beige;
     border-radius: 30px;
     gap: 10px;
   }
@@ -425,9 +415,11 @@ body {
   }
   .card-title {
     font-size: 17px;
+    color: rgba(136, 107, 107, 1);
   }
   .card-text {
     font-size: 14px;
+    color: rgba(136, 107, 107, 1);
   }
 }
 
@@ -520,7 +512,7 @@ body {
   .bar-menu-b {
     width: 100%;
     height: 600px;
-    padding-top: 300px;
+    padding-top: 250px;
     justify-content: end;
     gap: 50px;
   }

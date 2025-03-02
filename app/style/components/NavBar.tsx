@@ -5,6 +5,8 @@ import { LilitaOne } from "../ui/fonts";
 import { useState } from "react";
 import { Button } from "../smallcomponents/button";
 import image from "@/public/image.jpg";
+import otter from "@/public/panda.jpg";
+import owl from "@/public/owl.jpg";
 
 export function NavBar() {
   // For Menu Bar 1
@@ -40,10 +42,6 @@ export function NavBar() {
       setHasOpened(true);
     } else setBarMenu(false);
   }
-  function setBarMenuOff() {
-    setBarMenu(false);
-  }
-
   function handleAnimation() {
     if (!anim) setAnim(true);
     else setAnim(false);
@@ -69,7 +67,7 @@ export function NavBar() {
   return (
     <div className="navbar">
       <div id="bar" className={isOpen ? "bar-on" : "bar-off"}></div>
-      <div onMouseLeave={setBarMenuOff} className={barMenu ? "bar-menu-on" : "bar-menu-off "}>
+      <div className={barMenu ? "bar-menu-on" : "bar-menu-off "}>
         <div className="bar-menu-div">
           <div className="bar-menu-a">
             <h1>Our Best Workers</h1>
@@ -92,7 +90,7 @@ export function NavBar() {
             </div>
             <div
               className={barMenu ? "bar-menu-card" : ""}
-              style={{ backgroundImage: "url(" + image.src + ")", animationDelay: b }}
+              style={{ backgroundImage: "url(" + otter.src + ")", animationDelay: b }}
             >
               <h2 className="card-title" style={{ color: "white" }}>
                 Motanel Gaming
@@ -103,7 +101,7 @@ export function NavBar() {
             </div>
             <div
               className={barMenu ? "bar-menu-card" : ""}
-              style={{ backgroundImage: "url(" + image.src + ")", animationDelay: c }}
+              style={{ backgroundImage: "url(" + owl.src + ")", animationDelay: c }}
             >
               <h2 className="card-title" style={{ color: "white" }}>
                 Motanel Gaming
