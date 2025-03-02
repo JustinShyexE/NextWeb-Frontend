@@ -4,6 +4,7 @@ import { irinaSans } from "../ui/fonts";
 import { LilitaOne } from "../ui/fonts";
 import { useState } from "react";
 import { Button } from "../smallcomponents/button";
+import image from "@/public/image.jpg";
 
 export function NavBar() {
   // For Menu Bar 1
@@ -39,6 +40,9 @@ export function NavBar() {
       setHasOpened(true);
     } else setBarMenu(false);
   }
+  function setBarMenuOff() {
+    setBarMenu(false);
+  }
 
   function handleAnimation() {
     if (!anim) setAnim(true);
@@ -56,10 +60,61 @@ export function NavBar() {
     window.addEventListener("load", changeState);
     window.addEventListener("resize", changeState);
   }
+
+  //Animation delay for the 3 cards in the Navbar
+  const a: string = "0.2s";
+  const b: string = "0.3s";
+  const c: string = "0.4s";
+
   return (
     <div className="navbar">
       <div id="bar" className={isOpen ? "bar-on" : "bar-off"}></div>
-      <div className={barMenu ? "bar-menu-on" : "bar-menu-off "}></div>
+      <div onMouseLeave={setBarMenuOff} className={barMenu ? "bar-menu-on" : "bar-menu-off "}>
+        <div className="bar-menu-div">
+          <div className="bar-menu-a">
+            <h1>Our Best Workers</h1>
+            <p>
+              Our best workers with over 20 years of experience can be hired by you with just on
+              click.{" "}
+            </p>
+          </div>
+          <div className="bar-menu-b center">
+            <div
+              className={barMenu ? "bar-menu-card" : ""}
+              style={{ backgroundImage: "url(" + image.src + ")", animationDelay: a }}
+            >
+              <h2 className="card-title" style={{ color: "white" }}>
+                Motanel Gaming
+              </h2>
+              <p className="card-text" style={{ color: "white" }}>
+                start price £1000/mth
+              </p>
+            </div>
+            <div
+              className={barMenu ? "bar-menu-card" : ""}
+              style={{ backgroundImage: "url(" + image.src + ")", animationDelay: b }}
+            >
+              <h2 className="card-title" style={{ color: "white" }}>
+                Motanel Gaming
+              </h2>
+              <p className="card-text" style={{ color: "white" }}>
+                start price £1000/mth
+              </p>
+            </div>
+            <div
+              className={barMenu ? "bar-menu-card" : ""}
+              style={{ backgroundImage: "url(" + image.src + ")", animationDelay: c }}
+            >
+              <h2 className="card-title" style={{ color: "white" }}>
+                Motanel Gaming
+              </h2>
+              <p className="card-text" style={{ color: "white" }}>
+                start price £1000/mth
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         className={
           anim
@@ -108,8 +163,25 @@ export function NavBar() {
             : "navbar-end center"
         }
       >
-        <Button name="Contact us" animation="start" size={150} maxSize={170} />
-        <Button name="Later" animation="end" size={120} maxSize={140} id="btn-visibility" />
+        <Button
+          name="Contact us"
+          animation="start"
+          size={150}
+          maxSize={170}
+          id="btn-visibility"
+          color="rgba(189, 202, 190, 1)"
+        />
+        <Button
+          name="Later"
+          animation="end"
+          size={120}
+          maxSize={140}
+          id="btn-visibility"
+          color="rgba(189, 202, 190, 1)"
+        />
+        <button className="small-btn" style={{ backgroundColor: "rgba(189, 202, 190, 1)" }}>
+          Contact Us
+        </button>
       </div>
     </div>
   );

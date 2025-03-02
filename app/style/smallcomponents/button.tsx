@@ -4,7 +4,14 @@ import Image from "next/image";
 import arrow from "@/public/icons/right.png";
 import { useState } from "react";
 
-export function Button(props: { name: string; animation: string; maxSize: number; size: number; id:string}) {
+export function Button(props: {
+  name: string;
+  animation: string;
+  maxSize: number;
+  size: number;
+  id: string;
+  color: string;
+}) {
   const maxSize = { width: props.maxSize };
   const [hover, setHover] = useState(false);
 
@@ -19,10 +26,15 @@ export function Button(props: { name: string; animation: string; maxSize: number
 
   return (
     <div id={props.id} style={maxSize} className={bool ? "btn-div btn-start" : "btn-div btn-end"}>
-      <button 
-      style={{
-        width: hover ? props.maxSize: props.size,
-      }} onMouseLeave={handle} onMouseEnter={handle} className={`main-button center irinaSans`}>
+      <button
+        style={{
+          width: hover ? props.maxSize : props.size,
+          backgroundColor: props.color,
+        }}
+        onMouseLeave={handle}
+        onMouseEnter={handle}
+        className={`main-button center irinaSans`}
+      >
         <p className="btn-text">{props.name}</p>
         <Image className="arrow" alt="arrow" width={25} height={25} src={arrow} />
       </button>
