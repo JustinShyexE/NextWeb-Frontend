@@ -48,6 +48,7 @@ export function NavBar() {
   }
   function changeState() {
     if (window.innerWidth < 1200) {
+      console.log(window.innerWidth)
       setBarMenu(false);
       setAnim(false);
     }
@@ -150,7 +151,6 @@ export function NavBar() {
         }
       >
         <h2 className={`${LilitaOne.className} logo`}>NextWeb</h2>
-        <div className="logo-bck"></div>
       </div>
       <div
         className={
@@ -163,7 +163,7 @@ export function NavBar() {
       >
         <Button
           name="Contact us"
-          animation="start"
+          animation="end"
           size={150}
           maxSize={170}
           id="btn-visibility"

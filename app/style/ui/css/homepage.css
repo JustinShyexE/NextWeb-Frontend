@@ -1,523 +1,128 @@
-body {
-  margin: 0px;
-}
-.background {
-  background-color: red;
-}
-.logo {
-  color: rgba(136, 107, 107, 1);
-  font-size: 35px;
-  z-index: 5;
-}
-.slider-navbar {
+.home-main-image {
+  height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0px;
-  z-index: 20;
-}
-.homepage {
-  margin-top: 200px;
-}
-.logo-bck {
-  width: 100px;
-  height: 80px;
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  transform: rotate(50deg);
-}
-.body {
-  width: 100%;
-  height: 200vh;
-  background-color: bisque;
-}
-.square {
-  width: 250px;
-  height: 250px;
-  background-color: blue;
-  z-index: 0;
-}
-.center {
+  background-color: aquamarine;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
-/* Slider */
-.top-bar {
+.home-text-div {
+  width: 400px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+.home-title {
+  margin: 0px;
+  font-size: 50px;
+  color: white;
+}
+.home-text {
+  font-size: 20px;
+  color: white;
+}
+.home-main-text {
   width: 100%;
-  height: 45px;
-  background-color: rgba(225, 220, 220, 1);
-  position: relative;
+  height: 100px;
+  margin-top: 0px;
+  margin-bottom: 200px;
   overflow: hidden;
-  cursor: pointer;
-  z-index: 100;
-}
-.movingBar {
-  display: inline-flex;
-  gap: 20px;
-  height: 45px;
 }
 
-/* Nav-Bar */
-.navbar {
-  width: 100%;
-  height: 85px;
-  border: 0px;
-  display: inline-flex;
-  justify-content: space-between;
+
+.home-main-text-div {
+  width: 700px;
+  height: 70px;
+  margin-top: 0px;
+  opacity: 1;
+  animation: text-moveUp 0.25s ease-in-out;
+  animation-duration: 1s;
 }
-.navbar-start-open {
-  width: 75px;
-  height: 100%;
+@keyframes text-moveUp {
+  from {
+    margin-top: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
 }
-.navbar-start-close {
-  width: 75px;
-  height: 100%;
+
+.home-txt {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
-.navbar-hamburg {
-  z-index: 100;
-}
-.navbar-start-child {
+.vis{
   display: none;
 }
-.navbar-mid {
-  width: 140px;
-  height: 85px;
-  overflow: hidden;
-  position: relative;
-  z-index: 98;
+.vis-on{
+  display: inline;
 }
 
-.navbar-end {
-  width: 100px;
-  height: 100%;
-  z-index: 98;
-  gap: 5px;
-}
+/*try add proper classes name to make your work 2x easier*/
 
-/*Hamburg animated button*/
-.bar-on {
-  width: 100%;
-  height: 500px;
-  background-color: green;
-  position: absolute;
-  z-index: 99;
-  animation: barOn 0.25s ease-in-out;
-  animation-duration: 0.5s;
-}
-
-@keyframes barOn {
-  from {
-    height: 0px;
+@media only screen and (max-width: 400px) {
+  .home-text-div {
+    width: 280px;
   }
-  to {
-    height: 500px;
+  .home-title {
+    margin: 0px;
+    font-size: 40px;
   }
-}
-
-.bar-off {
-  width: 100%;
-  height: 0px;
-  background-color: green;
-  position: absolute;
-  z-index: 99;
-  animation: barOff 0.25s ease-out;
-  animation-duration: 0.5s;
-  visibility: hidden;
-}
-@keyframes barOff {
-  from {
-    height: 500px;
-  }
-  to {
-    height: 0px;
-  }
-}
-.cursor {
-  cursor: pointer;
-}
-
-.bar-menu-on {
-  visibility: visible;
-  width: auto;
-  height: 500px;
-  background-color: whitesmoke;
-  border-radius: 30px;
-  position: absolute;
-  opacity: 1;
-  top: 60px;
-  left: 20px;
-  right: 20px;
-  z-index: 50;
-  animation: barMenuOn 0.25s ease-in-out;
-  animation-duration: 0.5s;
-  z-index: 50;
-}
-@keyframes barMenuOn {
-  from {
-    opacity: 0;
-    top: -700px;
-  }
-  to {
-    top: 60px;
-    opacity: 1;
-  }
-}
-
-.bar-menu-off {
-  width: auto;
-  height: 700px;
-  background-color: whitesmoke;
-  position: absolute;
-  border-radius: 30px;
-  top: -700px;
-  opacity: 0;
-  left: 20px;
-  right: 20px;
-  z-index: 50;
-  animation: barMenuOff 0.25s ease-out;
-  animation-duration: 0.5s;
-  visibility: hidden;
-  z-index: 50;
-}
-@keyframes barMenuOff {
-  from {
-    top: 60px;
-    opacity: 1;
-  }
-  to {
-    top: -700px;
-    opacity: 0;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .logo {
-    font-size: 50px;
-  }
-  .logo-bck {
-    width: 105px;
-    height: 85px;
-    top: 7px;
-  }
-  .bar2 {
-    display: none;
-  }
-  .navbar-start-open {
-    width: 400px;
-    height: 100%;
-    justify-content: space-between;
-  }
-  .navbar-start-close {
-    width: 400px;
-    height: 100%;
-    justify-content: space-between;
-  }
-  .navbar-start-child {
-    width: 350px;
-    height: 50px;
-    display: inline-flex;
-    justify-content: start;
-    gap: 30px;
-    padding-left: 20px;
-    z-index: 98;
-  }
-  .navbar-hamburg {
-    width: 75px;
-    height: 75px;
-  }
-  .navbar-mid {
-    width: 199px;
-  }
-  .navbar-end {
-    width: 350px;
-  }
-  .navbar-button {
-    height: 25px;
-    text-decoration: none;
-    margin-top: 10px;
-    color: black;
-    font-weight: 800;
-  }
-  .navbar-button .nav-underline {
-    width: 0%;
-    height: 3px;
-    transition: width 0.2s ease-in;
-    border-bottom: 2px solid rgba(136, 107, 107, 1);
-  }
-
-  .navbar-button:hover .nav-underline {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .bar2 {
-    display: block;
-  }
-  .navbar-start {
-    width: 400px;
-    height: 100%;
-    justify-content: space-between;
-  }
-  .navbar-start-open {
-    position: relative;
-    left: 50px;
-    top: 20px;
-    animation: navbar-move 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes navbar-move {
-    from {
-      left: 0px;
-      top: 0px;
-    }
-    to {
-      left: 50px;
-      top: 20px;
-    }
-  }
-
-  .navbar-start-close {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    animation: navbar-putback 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes navbar-putback {
-    from {
-      left: 50px;
-      top: 20px;
-    }
-    to {
-      left: 0px;
-      top: 0px;
-    }
-  }
-
-  .navbar-mid-open {
-    width: 199px;
-    top: 15px;
-    animation: logo-anim-on 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes logo-anim-on {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 15px;
-    }
-  }
-
-  .navbar-mid-close {
-    width: 199px;
-    top: 0px;
-    animation: logo-anim-off 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes logo-anim-off {
-    from {
-      top: 15px;
-    }
-    to {
-      top: 0px;
-    }
-  }
-
-  .navbar-end-close {
-    position: relative;
-    right: 0px;
-    top: 0px;
-    animation: navEnd-close 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes navEnd-close {
-    from {
-      right: 50px;
-      top: 20px;
-    }
-    to {
-      right: 0px;
-      top: 0px;
-    }
-  }
-
-  .navbar-end-open {
-    position: relative;
-    right: 50px;
-    top: 20px;
-    animation: navEnd-open 0.25s ease-in-out;
-    animation-duration: 0.5s;
-  }
-  @keyframes navEnd-open {
-    from {
-      right: 0px;
-      top: 0px;
-    }
-    to {
-      right: 50px;
-      top: 20px;
-    }
-  }
-
-  .bar-menu-div {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .bar-menu-a {
-    width: 400px;
-    height: 350px;
-    padding-top: 150px;
-    padding-left: 50px;
-    border-radius: 30px;
-  }
-  .bar-menu-b {
-    width: 100%;
-    height: 400px;
-    padding-top: 100px;
-    border-radius: 30px;
-    gap: 10px;
-  }
-  .bar-menu-card {
-    width: 254px;
-    height: 308px;
-    background-color: red;
-    padding-left: 40px;
-    padding-top: 20px;
-    border-radius: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 160%;
-    transition: background-size 1s ease-in;
-    animation: menu-card-anim 0.25s ease-in-out;
-    animation-duration: 0.5s;
-    margin-top: 50px;
-    animation-delay: 0.3s;
-    cursor: pointer;
-  }
-  @keyframes menu-card-anim {
-    from {
-      margin-top: 0px;
-    }
-    to {
-      margin-top: 50px;
-    }
-  }
-
-  .bar-menu-card:hover {
-    background-size: 170%;
-  }
-  .card-title {
-    font-size: 17px;
-    color: rgba(136, 107, 107, 1);
-  }
-  .card-text {
+  .home-text {
     font-size: 14px;
-    color: rgba(136, 107, 107, 1);
+  }
+  #home-btn {
+    position: relative;
+    left: -25px;
   }
 }
 
-@media only screen and (min-width: 1400px) {
-  .bar-menu-b {
-    gap: 30px;
+@media only screen and (min-width: 400px) {
+  .home-txt {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .home-txt {
+    font-size: 29px;
+  }
+  .home-main-text {
+    height: 120px;
+  }
+  .home-main-text-div {
+    height: 100px;
   }
 }
 
-@media only screen and (min-width: 1600px) {
-  .bar-menu-a {
-    width: 420px;
-    height: 450px;
+@media only screen and (min-width: 1000px) {
+  .home-txt {
+    font-size: 40px;
   }
-  .bar-menu-b {
-    width: 100%;
-    height: 450px;
-    padding-top: 150px;
+  .home-main-text {
+    height: 170px;
   }
-  .bar-menu-card {
-    width: 290px;
-    height: 370px;
+  .home-main-text-div {
+    height: 130px;
   }
-  .bar-menu-on {
-    height: 600px;
-  }
-  .bar-menu-off {
-    height: 600px;
-  }
-}
 
-@media only screen and (min-width: 1700px) {
-  .bar-menu-b {
-    gap: 60px;
-  }
-  .card-title {
-    font-size: 24px;
-  }
-  .card-title {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 1850px) {
-  .bar-menu-on {
-    height: 750px;
-  }
-  .bar-menu-off {
-    height: 750px;
-  }
-  .bar-menu-a {
-    width: 400px;
-    height: 550px;
-    padding-left: 100px;
-    padding-top: 200px;
-  }
-  .bar-menu-b {
-    width: 100%;
-    height: 500px;
-    padding-top: 250px;
-    gap: 20px;
-    justify-content: end;
-    padding-right: 20px;
-  }
-  .bar-menu-card {
-    width: 357px;
-    height: 415px;
-  }
-  .bar-menu-div {
-    gap: 100px;
-  }
+
 }
 
 @media only screen and (min-width: 1920px) {
-  .bar-menu-b {
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 2100px) {
-  .bar-menu-on {
-    height: 900px;
-  }
-  .bar-menu-off {
-    height: 900px;
-  }
-  .bar-menu-a {
-    width: 400px;
-    height: 650px;
-    padding-left: 150px;
-  }
-  .bar-menu-b {
+  .home-main-text {
+    height: 200px;
     width: 100%;
-    height: 600px;
-    padding-top: 250px;
-    justify-content: end;
-    gap: 50px;
+    margin-top: 20px;
   }
-  .bar-menu-card {
-    width: 410px;
-    height: 500px;
+  .home-main-text-div {
+    width: 1100px;
+  }
+  .home-txt {
+    font-size: 45px;
   }
 }

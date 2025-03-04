@@ -1,5 +1,5 @@
 "use client";
-import "./style/ui/css/homepage.css";
+import "./style/ui/css/navbar.css";
 import { NavBar } from "./style/components/NavBar";
 import TopBarSlider from "./style/components/TopBarSlider";
 
