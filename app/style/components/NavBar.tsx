@@ -162,6 +162,7 @@ export function NavBar() {
         }
       >
         <Button
+         txtcolor=""
           name="Contact us"
           animation="end"
           size={150}
@@ -170,6 +171,7 @@ export function NavBar() {
           color="rgba(189, 202, 190, 1)"
         />
         <Button
+          txtcolor=""
           name="Later"
           animation="end"
           size={120}

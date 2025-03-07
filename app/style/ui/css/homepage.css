@@ -26,11 +26,14 @@
 .home-main-text {
   width: 100%;
   height: 100px;
+  background-color: aqua;
   margin-top: 0px;
-  margin-bottom: 200px;
   overflow: hidden;
 }
 
+#animTxt {
+  background-color: beige;
+}
 
 .home-main-text-div {
   width: 700px;
@@ -40,6 +43,7 @@
   animation: text-moveUp 0.25s ease-in-out;
   animation-duration: 1s;
 }
+
 @keyframes text-moveUp {
   from {
     margin-top: 100px;
@@ -56,13 +60,73 @@
   margin-top: 10px;
   margin-bottom: 0px;
 }
-.vis{
+.vis {
   display: none;
 }
-.vis-on{
-  display: inline;
+.home-cards {
+  width: 100%;
+  height: fit-content;
+  background-color: cadetblue;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 20px;
+  overflow: hidden;
+}
+.home-card {
+  height: 300px;
+  width: 85%;
+  max-width: 100%;
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  animation: card-anim 0.25s ease-in-out;
+  animation-duration: 1s;
+  opacity: 1;
+  margin-top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 180%;
+  transition: background-size 1s ease-in;
+}
+.home-card:hover {
+  background-size: 200%;
 }
 
+
+@keyframes card-anim {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.home-card-wrap {
+  height: fit-content;
+  width: 100%;
+  gap: 10px;
+  padding-bottom: 10%;
+}
+.home-card-txt-wrp {
+  width: 100%;
+  height: fit-content;
+  padding-top: 10%;
+}
+.home-card-title {
+  margin: 0%;
+  margin-bottom: 3%;
+  font-size: 18px;
+}
+.home-card-txt {
+  margin: 0%;
+  font-size: 14px;
+}
 /*try add proper classes name to make your work 2x easier*/
 
 @media only screen and (max-width: 400px) {
@@ -83,8 +147,31 @@
 }
 
 @media only screen and (min-width: 400px) {
+  .home-card {
+    height: 400px;
+  }
   .home-txt {
     font-size: 22px;
+  }
+  .home-card-wrap {
+    gap: 0px;
+    padding-left: 3%;
+  }
+  .home-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .home-card {
+    height: 500px;
+  }
+  .home-card-title {
+    font-size: 30px;
+  }
+  .home-card-txt {
+    font-size: 17px;
   }
 }
 @media only screen and (min-width: 650px) {
@@ -98,6 +185,26 @@
     height: 100px;
   }
 }
+@media only screen and (min-width: 700px) {
+  .home-cards {
+    flex-direction: row;
+  }
+  .home-card {
+    height: 350px;
+    width: 45%;
+  }
+  .home-card-title {
+    font-size: 18px;
+  }
+  .home-card-txt {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .home-card {
+    height: 510px;
+  }
+}
 
 @media only screen and (min-width: 1000px) {
   .home-txt {
@@ -109,14 +216,23 @@
   .home-main-text-div {
     height: 130px;
   }
-
-
+  .home-card {
+    height: 550px;
+    width: 500px;
+  }
+  .home-card-title {
+    font-size: 30px;
+  }
+  .home-card-txt {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
   .home-main-text {
     height: 200px;
     width: 100%;
+    background-color: aqua;
     margin-top: 20px;
   }
   .home-main-text-div {

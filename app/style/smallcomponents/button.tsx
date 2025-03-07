@@ -11,6 +11,8 @@ export function Button(props: {
   size: number;
   id: string;
   color: string;
+  txtcolor:string;
+  btnid:string
 }) {
   const maxSize = { width: props.maxSize };
   const [hover, setHover] = useState(false);
@@ -27,9 +29,11 @@ export function Button(props: {
   return (
     <div id={props.id} style={maxSize} className={bool ? "btn-div btn-start" : "btn-div btn-end"}>
       <button
+        id={props.btnid}
         style={{
           width: hover ? props.maxSize : props.size,
           backgroundColor: props.color,
+          color:props.txtcolor
         }}
         onMouseLeave={handle}
         onMouseEnter={handle}
