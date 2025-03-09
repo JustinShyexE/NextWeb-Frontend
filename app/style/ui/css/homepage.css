@@ -1,7 +1,27 @@
+body {
+  margin: 0px;
+}
+.body {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 300vh;
+}
+.square {
+  width: 250px;
+  height: 250px;
+  z-index: 0;
+}
+.background {
+  background-color: red;
+}
+.homepage {
+  margin-top: 200px;
+}
+
 .home-main-image {
   height: 100vh;
   width: 100%;
-  background-color: aquamarine;
   display: flex;
   justify-content: start;
   align-items: end;
@@ -26,7 +46,6 @@
 .home-main-text {
   width: 100%;
   height: 100px;
-  background-color: aqua;
   margin-top: 0px;
   overflow: hidden;
 }
@@ -64,19 +83,17 @@
   display: none;
 }
 .home-cards {
+  height: 570px;
   width: 100%;
-  height: fit-content;
-  background-color: cadetblue;
   flex-direction: column;
   margin-bottom: 30px;
   gap: 20px;
   overflow: hidden;
 }
 .home-card {
-  height: 300px;
+  height: 268px;
   width: 85%;
   max-width: 100%;
-  background-color: chocolate;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,13 +105,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 180%;
+  background-size: 140%;
   transition: background-size 1s ease-in;
+  overflow: hidden;
 }
 .home-card:hover {
-  background-size: 200%;
+  background-size: 148%;
 }
-
 
 @keyframes card-anim {
   from {
@@ -127,6 +144,9 @@
   margin: 0%;
   font-size: 14px;
 }
+.hide{
+  display: none;
+}
 /*try add proper classes name to make your work 2x easier*/
 
 @media only screen and (max-width: 400px) {
@@ -147,8 +167,11 @@
 }
 
 @media only screen and (min-width: 400px) {
+  .home-cards {
+    height: 750px;
+  }
   .home-card {
-    height: 400px;
+    height: 355px;
   }
   .home-txt {
     font-size: 22px;
@@ -166,6 +189,9 @@
 @media only screen and (min-width: 550px) {
   .home-card {
     height: 500px;
+  }
+  .home-cards {
+    height: 1050px;
   }
   .home-card-title {
     font-size: 30px;
@@ -188,9 +214,10 @@
 @media only screen and (min-width: 700px) {
   .home-cards {
     flex-direction: row;
+    height: 350px;
   }
   .home-card {
-    height: 350px;
+    height: 330px;
     width: 45%;
   }
   .home-card-title {
@@ -202,7 +229,10 @@
 }
 @media only screen and (min-width: 850px) {
   .home-card {
-    height: 510px;
+    height: 400px;
+  }
+  .home-cards {
+    height: 420px;
   }
 }
 
@@ -217,8 +247,11 @@
     height: 130px;
   }
   .home-card {
-    height: 550px;
+    height: 500px;
     width: 500px;
+  }
+  .home-cards {
+    height: 550px;
   }
   .home-card-title {
     font-size: 30px;
@@ -232,7 +265,6 @@
   .home-main-text {
     height: 200px;
     width: 100%;
-    background-color: aqua;
     margin-top: 20px;
   }
   .home-main-text-div {
@@ -240,5 +272,8 @@
   }
   .home-txt {
     font-size: 45px;
+  }
+  .hidden {
+    display: none;
   }
 }

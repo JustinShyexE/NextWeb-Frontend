@@ -162,6 +162,7 @@ export function NavBar() {
         }
       >
         <Button
+        btnid=""
          txtcolor=""
           name="Contact us"
           animation="end"
@@ -171,6 +172,7 @@ export function NavBar() {
           color="rgba(189, 202, 190, 1)"
         />
         <Button
+           btnid=""
           txtcolor=""
           name="Later"
           animation="end"

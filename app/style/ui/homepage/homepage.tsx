@@ -41,7 +41,7 @@ export function Body() {
       {
         root: null, // Uses viewport
         rootMargin: "0px", // Trigger exactly at viewport edge
-        threshold: 0.7, // Trigger when any part becomes visible
+        threshold: 0, // Trigger when any part becomes visible
       }
     );
 
@@ -92,36 +92,42 @@ export function Body() {
         </div>
       </div>
 
-      <div  className="home-cards center">
+      <div ref={div2Ref} className="home-cards center">
         <Card
+          class={isDiv2Visible ? "" : "hide"}
           imageUrl={owl}
           title=" Find Plumber"
           text="start at £100 / service"
           txtcolor="white"
+          delay=""
         />
         <Card
+          class={isDiv2Visible ? "" : "hide"}
           imageUrl={owl}
           title=" Find Plumber"
           text="start at £100 / service"
           txtcolor="white"
+          delay=""
         />
       </div>
-
-      <div className="home-cards center">
+      <div ref={div3Ref} className="home-cards center">
         <Card
-          imageUrl={panda}
-          title=" Find Plumber"
-          text="start at £100 / service"
-          txtcolor="white"
-        />
-        <Card
+          class={isDiv3Visible ? "" : "hide"}
           imageUrl={owl}
           title=" Find Plumber"
           text="start at £100 / service"
           txtcolor="white"
+          delay=""
+        />
+        <Card
+          class={isDiv3Visible ? "" : "hide"}
+          imageUrl={owl}
+          title=" Find Plumber"
+          text="start at £100 / service"
+          txtcolor="white"
+          delay=""
         />
       </div>
-      <div className="home-cards"></div>
       <div id="squar" className="square"></div>
       <Link href={"http://localhost:3001/homepage"}>
         <div className="link"></div>
