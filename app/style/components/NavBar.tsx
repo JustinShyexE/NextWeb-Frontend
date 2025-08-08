@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Button } from "../smallcomponents/button";
 import image from "@/public/image.jpg";
 import otter from "@/public/panda.jpg";
-import owl from "@/public/owl.jpg";
+import owl from "@/public/owl3.jpg";
+import BarOn from "@/app/style/components/BarOn"
 
 export function NavBar() {
   // For Menu Bar 1
@@ -67,11 +68,13 @@ export function NavBar() {
 
   return (
     <div className="navbar">
-      <div id="bar" className={isOpen ? "bar-on" : "bar-off"}></div>
+      <div id="bar" className={isOpen ? "bar-on" : "bar-off"}>
+        <BarOn open={isOpen ? true : false} />
+      </div>
       <div className={barMenu ? "bar-menu-on" : "bar-menu-off "}>
         <div className="bar-menu-div">
           <div className="bar-menu-a">
-            <h1>Our Best Workers</h1>
+            <h1 >Our Best Workers</h1>
             <p>
               Our best workers with over 20 years of experience can be hired by you with just on
               click.{" "}
@@ -189,10 +192,3 @@ export function NavBar() {
   );
 }
 
-/*          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/homepage">This is the secondpage Homepage2...</Link>
-          </li>
-      </div> */

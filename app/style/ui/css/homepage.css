@@ -38,10 +38,43 @@ body {
   margin: 0px;
   font-size: 50px;
   color: white;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  animation : text-moveU 0.25s ease-in-out;
+  animation-duration: 1s; 
 }
+.home-title-plus{
+  animation : text-moveU 0.25s ease-in-out;
+  animation-duration: 0.75s;
+}
+
+@keyframes text-moveU {
+  from {
+    opacity: 0;
+    top:30px
+  }
+  to {
+    opacity: 1;
+    top:0px;
+  }
+}
+
 .home-text {
   font-size: 20px;
   color: white;
+  animation: home-txt 0.25s ease-in-out forwards;
+  animation-duration: 1s;
+  animation-delay: 0.75s;
+  opacity: 0;
+}
+@keyframes home-txt {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .home-main-text {
   width: 100%;
@@ -105,12 +138,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 140%;
+  background-size: 118%;
   transition: background-size 1s ease-in;
   overflow: hidden;
 }
 .home-card:hover {
-  background-size: 148%;
+  background-size: 130%;
 }
 
 @keyframes card-anim {
@@ -188,7 +221,8 @@ body {
 }
 @media only screen and (min-width: 550px) {
   .home-card {
-    height: 500px;
+    height: 1000px;
+    width: 95%;
   }
   .home-cards {
     height: 1050px;
@@ -229,10 +263,10 @@ body {
 }
 @media only screen and (min-width: 850px) {
   .home-card {
-    height: 400px;
+    height: 450px;
   }
   .home-cards {
-    height: 420px;
+    height: 520px;
   }
 }
 
@@ -247,17 +281,23 @@ body {
     height: 130px;
   }
   .home-card {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
   }
   .home-cards {
-    height: 550px;
+    height: 750px;
   }
   .home-card-title {
     font-size: 30px;
   }
   .home-card-txt {
     font-size: 17px;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  .home-card {
+    height: 700px;
+    width: 600px;
   }
 }
 

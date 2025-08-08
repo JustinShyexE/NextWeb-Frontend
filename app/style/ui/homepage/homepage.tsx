@@ -8,7 +8,8 @@ import { AbhayaLibre2 } from "@/app/style/ui/fonts";
 import { useEffect, useRef, useState } from "react";
 import Card from "../../smallcomponents/card";
 import panda from "../../../../public/panda.jpg";
-import owl from "@/public/owl2.jpg";
+import owl from "@/public/cat2.jpg";
+import owl3 from "@/public/owl3.jpg";
 export function Footer() {
   return <div className="background">Footer hih</div>;
 }
@@ -57,7 +58,7 @@ export function Body() {
       if (div3Ref.current) observer.unobserve(div3Ref.current);
     };
   }, []); // Empty dependenc
-
+  
   //add the card make the animation least longer and put the trigger at 0.2
 
   return (
@@ -65,8 +66,8 @@ export function Body() {
       <div className="home-main-image" style={{ backgroundImage: "url(" + homepage1.src + ")" }}>
         <div className="home-text-div">
           <h1 className={AbhayaLibre.className + " home-title"}>NextWeb</h1>
-          <h1 className={AbhayaLibre.className + " home-title"}>Best workers of all times</h1>
-          <h3 className="home-text">
+          <h1 className={AbhayaLibre.className + " home-title home-title-plus"}>Best workers of all times</h1>
+          <h3 className={AbhayaLibre.className + " home-text"}>
             Discover our little animals and put them to work, now at the best price possible
           </h3>
           <Button
@@ -103,7 +104,7 @@ export function Body() {
         />
         <Card
           class={isDiv2Visible ? "" : "hide"}
-          imageUrl={owl}
+          imageUrl={owl3}
           title=" Find Plumber"
           text="start at £100 / service"
           txtcolor="white"
