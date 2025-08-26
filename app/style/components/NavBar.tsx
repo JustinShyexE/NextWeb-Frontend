@@ -19,7 +19,7 @@ export function NavBar() {
   let count: boolean = true;
   function openClose() {
     if (count) {
-      const el = document.querySelector(".bar-off");
+      const el = document.querySelector(".bar-off")as HTMLElement | null;
       if (el) el.style.visibility = "visible";
       count = false;
     }
@@ -33,7 +33,7 @@ export function NavBar() {
   let bol: boolean = true;
   function barmenu() {
     if (bol) {
-      const el = document.querySelector(".bar-menu-off");
+      const el = document.querySelector(".bar-menu-off")as HTMLElement | null;
       if (el) el.style.visibility = "visible";
       bol = false;
     }

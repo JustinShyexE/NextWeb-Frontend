@@ -7,7 +7,7 @@ import homepage1 from "@/public/homepage1.jpg";
 import { AbhayaLibre2 } from "@/app/style/ui/fonts";
 import { useEffect, useRef, useState } from "react";
 import Card from "../../smallcomponents/card";
-import panda from "../../../../public/panda.jpg";
+//import panda from "../../../../public/panda.jpg";
 import owl from "@/public/cat2.jpg";
 import owl3 from "@/public/owl3.jpg";
 export function Footer() {
