@@ -7,13 +7,17 @@ export default function Card(props: {
   title: string;
   text: string;
   txtcolor: string;
-  imageUrl: string | StaticImageData;
-  class:string;
+  imageUrl: StaticImageData;
+  class: string;
   delay: string;
 }) {
+
   return (
-    <div style={{animationDelay: props.delay, backgroundImage: "url(" + props.imageUrl.src + ")" }} className={props.class + " home-card"} >
-    {/*}  <Image className="card-img" src={panda} alt=""  />*/}
+    <div
+      style={{ animationDelay: props.delay, backgroundImage: "url(" + props.imageUrl.src + ")" }}
+      className={props.class + " home-card"}
+    >
+      {/*}  <Image className="card-img" src={panda} alt=""  />*/}
       <div className="home-card-txt-wrp">
         <p className="home-card-title center" style={{ color: props.txtcolor }}>
           {props.title}
