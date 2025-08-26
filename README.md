@@ -1,4 +1,4 @@
-A new website with Next.js that is in progress:  https://vercel.com/shyexees-projects/nextweb/2Uhjehuyo6aPGtqaYdnSwgVq3Pvi
+A new website with Next.js that is in progress:  https://nextweb-hsadr8zur-shyexees-projects.vercel.app/
 
 ## Getting Started
 

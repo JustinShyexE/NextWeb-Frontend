@@ -29,7 +29,7 @@ export function NavBar() {
     if (anim) setAnim(false);
   }
 
-  // For Menu Bar 2
+  // For Menu Bar 2 
   let bol: boolean = true;
   function barmenu() {
     if (bol) {
