@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@next/font": "^14.2.15",
     "gsap": "^3.12.7",
     "hamburger-react": "^2.5.2",
     "next": "15.1.7",
