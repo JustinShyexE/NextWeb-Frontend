@@ -3,6 +3,7 @@ import "../css/homepage.css";
 import Link from "next/link";
 import { Button } from "../../smallcomponents/button";
 import { AbhayaLibre } from "@/app/style/ui/fonts";
+import { CarouselComp } from "../../components/CarouselComp";
 import homepage1 from "@/public/homepage1.jpg";
 import { AbhayaLibre2 } from "@/app/style/ui/fonts";
 import { useEffect, useRef, useState } from "react";
@@ -133,6 +134,8 @@ export function Body() {
       <Link href={"http://localhost:3001/homepage"}>
         <div className="link"></div>
       </Link>
+      <CarouselComp />
+      <div style={{height:'1000px', width:'100%',marginTop:'300px', backgroundColor:'blue'}}></div>
     </div>
   );
 }

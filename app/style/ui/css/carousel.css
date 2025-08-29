@@ -1,0 +1,78 @@
+.carousel-body {
+  height: 70vh;
+  width: 100%;
+  background-color: red;
+  border-bottom: 300px;
+  animation: carouselAnim 1s ease-in-out forwards;
+  position: relative;
+  opacity: 0.08;
+  left: -200px;
+  transform: rotate(25deg);
+  transition: left 0.6s ease-in-out, top 0.5s ease-in-out, transform 0.8s ease-in-out,
+    opacity 0.7s ease-in-out;
+}
+.carousel-body:hover {
+  transform: rotate(0deg);
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+}
+.carousel-title {
+  width: 100%;
+  height: 70px;
+  background-color: blueviolet;
+  gap: 20px;
+}
+.carousel-main {
+  width: 100%;
+  height: 75%;
+  background-color: aquamarine;
+  display: flex;
+  position: absolute;
+}
+.carousel-left {
+  width: 50%;
+  height: 94%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+}
+.carousel-right {
+  width: 50%;
+  height: 94%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+ 
+}
+.carousel-right:hover {
+  cursor: url("../../../../public/cursorR.png"), pointer;
+}
+.carousel-left:hover {
+  cursor: url("../../../../public/cursorL.png"), pointer;
+}
+.carousel-text {
+  width: 100%;
+  height: 14%;
+  background-color: greenyellow;
+  position: absolute;
+  bottom: 12px;
+}
+.carousel-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: rebeccapurple;
+  position: absolute;
+}
+.carousel-img-div {
+  height: 690px;
+  width: 100%;
+  margin-left: 40px;
+  background-color: palegoldenrod;
+}
+.carousel-img{
+    height: 700px;
+    width: 500px;
+}
+
