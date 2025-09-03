@@ -4,8 +4,12 @@ import "react-multi-carousel/lib/styles.css";
 import { useRef } from "react";
 import Image from "next/image";
 import catImage from "../../../public/catTransparent.png";
+import { Button } from "./../smallcomponents/button";
+import Buttonsm from "./../smallcomponents/buttonsm";
+import { AbhayaLibre } from "../ui/fonts";
+import { AbhayaLibre2 } from "../ui/fonts";
 
-export function CarouselComp() {
+export function CarouselComp(props: { class: string, carouselLeft?: string, carouselRight?: string }) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -35,19 +39,13 @@ export function CarouselComp() {
   };
 
   return (
-    <div className="carousel-body">
-      <div className="carousel-title center">
-        <a href="#slide1" className="btn btn-circle">
-          Hello1
-        </a>
-        <a href="#slide2" className="btn btn-circle">
-          Hello2
-        </a>
-      </div>
+    <div className={props.class}>
+      <div className="carousel-title center"></div>
       <div className="carousel-main">
-        <div className="carousel-left" onClick={handlePrev}></div>
-        <div className="carousel-right" onClick={handleNext}></div>
+        <div className={props.carouselLeft} onClick={handlePrev}></div>
+        <div className={props.carouselRight} onClick={handleNext}></div>
         <div className="carousel-wrapper">
+             <div className="carousel-line"></div>  
           <Carousel
             ref={carouselRef}
             swipeable={false}
@@ -85,7 +83,39 @@ export function CarouselComp() {
           </Carousel>
         </div>
       </div>
-      <div className="carousel-text center"></div>
+      <div className="carousel-text center">
+        <h2 className={AbhayaLibre.className + " carousel-title " + "center"}>Tom Cartel</h2>
+        <p className={AbhayaLibre2.className + " carousel-p center"}>Starting price from: 123$</p>
+        <span className="center carousel-btns">
+          <Buttonsm name="Book" textcolor="white" color="rgba(136, 107, 107, 1)" id="btn-sm-wh" />
+          <Buttonsm
+            name="&nbsp;About"
+            textcolor="black"
+            color="rgba(189, 202, 190, 1)"
+            id="btn-sm-wh"
+          />
+          <Button
+            id="btn-big-wh"
+            btnid=""
+            color="rgba(189, 202, 190, 1)"
+            name="&nbsp;About"
+            animation="end"
+            size={130}
+            maxSize={150}
+            txtcolor="black"
+          />
+          <Button
+            id="btn-big-wh"
+            btnid=""
+            color="rgba(189, 202, 190, 1)"
+            name="&nbsp;&nbsp;Book"
+            animation="end"
+            size={130}
+            maxSize={150}
+            txtcolor="black"
+          />
+        </span>
+      </div>
     </div>
   );
 }

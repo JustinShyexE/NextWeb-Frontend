@@ -20,11 +20,13 @@ export function Body() {
   const [isDiv1Visible, setIsDiv1Visible] = useState(false);
   const [isDiv2Visible, setIsDiv2Visible] = useState(false);
   const [isDiv3Visible, setIsDiv3Visible] = useState(false);
+  const [isDiv4Visible, setIsDiv4Visible] = useState(false);
 
   // Refs for each div
   const div1Ref = useRef(null);
   const div2Ref = useRef(null);
   const div3Ref = useRef(null);
+  const div4Ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,6 +39,10 @@ export function Body() {
             setIsDiv2Visible(entry.isIntersecting);
           } else if (entry.target === div3Ref.current) {
             setIsDiv3Visible(entry.isIntersecting);
+          } else if (entry.target === div4Ref.current) {
+            setTimeout(() => {
+              setIsDiv4Visible(entry.isIntersecting);
+            }, 500);
           }
         });
       },
@@ -51,15 +57,17 @@ export function Body() {
     if (div1Ref.current) observer.observe(div1Ref.current);
     if (div2Ref.current) observer.observe(div2Ref.current);
     if (div3Ref.current) observer.observe(div3Ref.current);
+    if (div4Ref.current) observer.observe(div4Ref.current);
 
     // Cleanup
     return () => {
       if (div1Ref.current) observer.unobserve(div1Ref.current);
       if (div2Ref.current) observer.unobserve(div2Ref.current);
       if (div3Ref.current) observer.unobserve(div3Ref.current);
+      if (div4Ref.current) observer.unobserve(div4Ref.current);
     };
   }, []); // Empty dependenc
-  
+
   //add the card make the animation least longer and put the trigger at 0.2
 
   return (
@@ -67,7 +75,9 @@ export function Body() {
       <div className="home-main-image" style={{ backgroundImage: "url(" + homepage1.src + ")" }}>
         <div className="home-text-div">
           <h1 className={AbhayaLibre.className + " home-title"}>NextWeb</h1>
-          <h1 className={AbhayaLibre.className + " home-title home-title-plus"}>Best workers of all times</h1>
+          <h1 className={AbhayaLibre.className + " home-title home-title-plus"}>
+            Best workers of all times
+          </h1>
           <h3 className={AbhayaLibre.className + " home-text"}>
             Discover our little animals and put them to work, now at the best price possible
           </h3>
@@ -130,12 +140,19 @@ export function Body() {
           delay=""
         />
       </div>
-      <div id="squar" className="square"></div>
       <Link href={"http://localhost:3001/homepage"}>
         <div className="link"></div>
       </Link>
-      <CarouselComp />
-      <div style={{height:'1000px', width:'100%',marginTop:'300px', backgroundColor:'blue'}}></div>
+      <span ref={div4Ref}>
+        <CarouselComp
+          class={isDiv4Visible ? "carousel-body carousel-body-visible" : "carousel-body"}
+          carouselLeft = {isDiv4Visible ? "carousel-left" : ""}
+          carouselRight = {isDiv4Visible ? "carousel-right" : ""}
+        />
+      </span>
+      <div
+        style={{ height: "1000px", width: "100%", marginTop: "300px", backgroundColor: "blue" }}
+      ></div>
     </div>
   );
 }

@@ -1,32 +1,28 @@
+
 .carousel-body {
-  height: 70vh;
+  height: 66vh;
   width: 100%;
-  background-color: red;
   border-bottom: 300px;
   animation: carouselAnim 1s ease-in-out forwards;
   position: relative;
-  opacity: 0.08;
+  opacity: 0;
+  top: 200px;
   left: -200px;
+  margin-top: 25vh;
   transform: rotate(25deg);
   transition: left 0.6s ease-in-out, top 0.5s ease-in-out, transform 0.8s ease-in-out,
     opacity 0.7s ease-in-out;
 }
-.carousel-body:hover {
+.carousel-body-visible {
   transform: rotate(0deg);
   top: 0px;
   left: 0px;
   opacity: 1;
 }
-.carousel-title {
-  width: 100%;
-  height: 70px;
-  background-color: blueviolet;
-  gap: 20px;
-}
 .carousel-main {
   width: 100%;
-  height: 75%;
-  background-color: aquamarine;
+  height: 47vh;
+  border-bottom: 1px solid black;
   display: flex;
   position: absolute;
 }
@@ -36,7 +32,6 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-
 }
 .carousel-right {
   width: 50%;
@@ -44,35 +39,137 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
- 
 }
-.carousel-right:hover {
-  cursor: url("../../../../public/cursorR.png"), pointer;
-}
-.carousel-left:hover {
-  cursor: url("../../../../public/cursorL.png"), pointer;
-}
+
 .carousel-text {
   width: 100%;
-  height: 14%;
-  background-color: greenyellow;
+  height: 24%;
   position: absolute;
-  bottom: 12px;
+  top: 46vh;
+  display: inline-block;
 }
 .carousel-wrapper {
   height: 100%;
   width: 100%;
-  background-color: rebeccapurple;
   position: absolute;
+   background-color:rgba(250, 254, 255, 1);
+}
+.carousel-line {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  background-color:rgba(252, 252, 255, 1);
 }
 .carousel-img-div {
-  height: 690px;
+  height: 100%;
   width: 100%;
   margin-left: 40px;
-  background-color: palegoldenrod;
 }
-.carousel-img{
-    height: 700px;
-    width: 500px;
+.carousel-img {
+  height: 47vh;
+  width: 35vh;
+}
+.carousel-title {
+  margin-bottom: -10px;
+  font-size: 1.75rem;
+}
+.carusel-p {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.carousel-right:hover {
+  cursor: url("../../../../public/icons/cursorR50.png"), pointer;
+}
+.carousel-left:hover {
+  cursor: url("../../../../public/icons/cursorL50.png"), pointer;
+}
+.carousel-btns {
+  gap: 10px;
 }
 
+@media only screen and (max-width: 850px) {
+  .carousel-img {
+    height: 30vh;
+    width: 21vh;
+  }
+  .carousel-text {
+    top: 29vh;
+  }
+  .carousel-wrapper {
+    height: 78%;
+  }
+  .carousel-main {
+    width: 100%;
+    height: 30vh;
+  }
+  .carousel-body {
+    height: 44vh;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .carousel-img {
+    height: 22vh;
+    width: 15vh;
+  }
+  .carousel-text {
+    top: 21vh;
+  }
+  .carousel-main {
+    width: 100%;
+    height: 22vh;
+  }
+  .carousel-body {
+    height: 36vh;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .carousel-btns {
+    gap: 0px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .carousel-right:hover {
+    cursor: url("../../../../public/icons/cursorR75.png"), pointer;
+  }
+  .carousel-left:hover {
+    cursor: url("../../../../public/icons/cursorL75.png"), pointer;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .carousel-title {
+    font-size: 2.25rem;
+  }
+  .carusel-p {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+}
+@media only screen and (min-width: 850px) {
+  .carousel-right:hover {
+    cursor: url("../../../../public/cursorR.png"), pointer;
+  }
+  .carousel-left:hover {
+    cursor: url("../../../../public/cursorL.png"), pointer;
+  }
+  .carousel-title {
+    font-size: 2.75rem;
+  }
+  .carusel-p {
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .carousel-title {
+    font-size: 3.25rem;
+  }
+  .carusel-p {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 1150px) {
+}
+@media only screen and (min-width: 1920px) {
+}
