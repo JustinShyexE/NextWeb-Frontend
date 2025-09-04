@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
 }
 html{
-    filter: saturate(1.85);
+   filter: contrast(1.1) saturate(1.85);
 }
 .body {
   position: absolute;
