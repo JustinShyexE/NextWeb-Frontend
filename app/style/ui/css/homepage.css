@@ -2,6 +2,9 @@ body {
   margin: 0px;
   overflow-x: hidden;
 }
+html{
+    filter: saturate(1.85);
+}
 .body {
   position: absolute;
   top: 0px;
